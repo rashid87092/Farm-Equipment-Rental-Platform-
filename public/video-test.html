@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Test</title>
+</head>
+<body>
+    <h1>Video Test Page</h1>
+    
+    <h2>Direct Video Test:</h2>
+    <video width="400" height="300" autoplay loop muted controls>
+        <source src="/tractor-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <h2>Fallback Image Test:</h2>
+    <img src="/images/tractor-field.jpg" alt="Tractor" width="400" height="300">
+    
+    <script>
+        // Test video loading
+        const video = document.querySelector('video');
+        video.addEventListener('loadeddata', () => {
+            console.log('✅ Video loaded successfully');
+        });
+        video.addEventListener('error', (e) => {
+            console.log('❌ Video failed to load:', e);
+        });
+        video.addEventListener('canplay', () => {
+            console.log('✅ Video can play');
+        });
+    </script>
+</body>
+</html>

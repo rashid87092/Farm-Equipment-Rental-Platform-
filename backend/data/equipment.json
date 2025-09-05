@@ -1,0 +1,275 @@
+[
+  {
+    "id": "1",
+    "name": "John Deere 5055E Tractor",
+    "category": "Tractor",
+    "description": "Powerful 55 HP tractor perfect for medium-scale farming operations. Features 4WD capability and comfortable cabin.",
+    "image": "/images/john_deere.jpg",
+    "images": [
+      "/images/john_deere.jpg",
+      "/images/john_deere.jpg",
+      "/images/john_deere.jpg"
+    ],
+    "pricePerDay": 2500,
+    "pricePerWeek": 15000,
+    "pricePerMonth": 55000,
+    "specifications": {
+      "horsepower": "55 HP",
+      "engine": "3-cylinder diesel",
+      "transmission": "9F/3R",
+      "fuelCapacity": "120 liters",
+      "weight": "2800 kg"
+    },
+    "features": [
+      "4WD capability",
+      "Power steering",
+      "Comfortable cabin",
+      "PTO (Power Take-Off)",
+      "Hydraulic lift"
+    ],
+    "available": true,
+    "location": "Punjab, India",
+    "owner": {
+      "name": "Rajesh Singh",
+      "phone": "+91 98765 43210",
+      "rating": 4.8
+    },
+    "rating": 4.7,
+    "reviews": 23,
+    "createdAt": "2024-01-15T10:30:00Z",
+    "updatedAt": "2024-09-01T15:45:00Z"
+  },
+  {
+    "id": "2",
+    "name": "Mahindra 575 DI Tractor",
+    "category": "Tractor",
+    "description": "Reliable 75 HP tractor with excellent fuel efficiency. Perfect for heavy-duty farming and agricultural work.",
+    "image": "/images/mahindra_tractor.jpg",
+    "images": [
+      "/images/mahindra_tractor.jpg",
+      "/images/mahindra_tractor.jpg",
+      "/images/tractor-field.jpg"
+    ],
+    "pricePerDay": 3000,
+    "pricePerWeek": 18000,
+    "pricePerMonth": 65000,
+    "specifications": {
+      "horsepower": "75 HP",
+      "engine": "4-cylinder diesel",
+      "transmission": "8F/2R",
+      "fuelCapacity": "65 liters",
+      "weight": "3200 kg"
+    },
+    "features": [
+      "High fuel efficiency",
+      "Advanced hydraulics",
+      "Comfortable seating",
+      "Multi-speed PTO",
+      "Heavy-duty build"
+    ],
+    "available": true,
+    "location": "Haryana, India",
+    "owner": {
+      "name": "Priya Sharma",
+      "phone": "+91 87654 32109",
+      "rating": 4.9
+    },
+    "rating": 4.6,
+    "reviews": 31,
+    "createdAt": "2024-02-20T09:15:00Z",
+    "updatedAt": "2024-09-02T11:20:00Z"
+  },
+  {
+    "id": "3",
+    "name": "New Holland 3630 Tractor",
+    "category": "Tractor",
+    "description": "Versatile 75 HP tractor with modern technology. Excellent for both field work and transportation.",
+    "image": "/images/new_holland_tractor.jpg",
+    "images": [
+      "/images/new_holland_tractor.jpg",
+      "/images/new_holland_tractor.jpg"
+    ],
+    "pricePerDay": 2800,
+    "pricePerWeek": 17000,
+    "pricePerMonth": 62000,
+    "specifications": {
+      "horsepower": "75 HP",
+      "engine": "4-cylinder turbo diesel",
+      "transmission": "8F/8R",
+      "fuelCapacity": "110 liters",
+      "weight": "3100 kg"
+    },
+    "features": [
+      "Turbo engine",
+      "Synchro shuttle transmission",
+      "Air-conditioned cabin",
+      "Advanced hydraulics",
+      "GPS ready"
+    ],
+    "available": false,
+    "location": "Maharashtra, India",
+    "owner": {
+      "name": "Amit Patel",
+      "phone": "+91 76543 21098",
+      "rating": 4.7
+    },
+    "rating": 4.8,
+    "reviews": 18,
+    "createdAt": "2024-03-10T14:22:00Z",
+    "updatedAt": "2024-09-03T08:30:00Z"
+  },
+  {
+    "id": "4",
+    "name": "Combine Harvester - John Deere S680",
+    "category": "Harvester",
+    "description": "High-capacity combine harvester for efficient grain harvesting. Suitable for wheat, rice, and other crops.",
+    "image": "/images/tractor-field.jpg",
+    "images": [
+      "/images/tractor-field.jpg",
+      "/images/tractor-field.jpg"
+    ],
+    "pricePerDay": 8000,
+    "pricePerWeek": 45000,
+    "pricePerMonth": 180000,
+    "specifications": {
+      "engine": "670 HP",
+      "grainTankCapacity": "14,100 liters",
+      "cuttingWidth": "10.7 meters",
+      "threshingSystem": "Single rotor",
+      "weight": "18,500 kg"
+    },
+    "features": [
+      "ActiveVision cameras",
+      "Automated settings",
+      "Large grain tank",
+      "Comfortable cab",
+      "High efficiency"
+    ],
+    "available": true,
+    "location": "Punjab, India",
+    "owner": {
+      "name": "Gurpreet Kaur",
+      "phone": "+91 65432 10987",
+      "rating": 4.9
+    },
+    "rating": 4.9,
+    "reviews": 12,
+    "createdAt": "2024-04-05T16:45:00Z",
+    "updatedAt": "2024-09-04T12:15:00Z"
+  },
+  {
+    "id": "5",
+    "name": "Cultivator - 9 Tyne Heavy Duty",
+    "category": "Cultivator",
+    "description": "Heavy-duty 9-tyne cultivator for primary tillage operations. Ideal for breaking hard soil.",
+    "image": "/images/tractor-field.jpg",
+    "images": [
+      "/images/tractor-field.jpg"
+    ],
+    "pricePerDay": 800,
+    "pricePerWeek": 4500,
+    "pricePerMonth": 18000,
+    "specifications": {
+      "workingWidth": "2.5 meters",
+      "tynes": "9",
+      "workingDepth": "20-30 cm",
+      "weight": "750 kg",
+      "powerRequirement": "45-65 HP"
+    },
+    "features": [
+      "Heavy-duty tines",
+      "Adjustable depth",
+      "Durable construction",
+      "Easy maintenance",
+      "Suitable for hard soil"
+    ],
+    "available": true,
+    "location": "Uttar Pradesh, India",
+    "owner": {
+      "name": "Suresh Kumar",
+      "phone": "+91 54321 09876",
+      "rating": 4.5
+    },
+    "rating": 4.4,
+    "reviews": 8,
+    "createdAt": "2024-05-12T11:30:00Z",
+    "updatedAt": "2024-09-05T09:45:00Z"
+  },
+  {
+    "id": "6",
+    "name": "Seed Drill - 11 Furrow",
+    "category": "Seeder",
+    "description": "Precision seed drill with 11 furrows for accurate seed placement and optimal crop establishment.",
+    "image": "/images/tractor-field.jpg",
+    "images": [
+      "/images/tractor-field.jpg"
+    ],
+    "pricePerDay": 1200,
+    "pricePerWeek": 7000,
+    "pricePerMonth": 28000,
+    "specifications": {
+      "furrows": "11",
+      "workingWidth": "2.75 meters",
+      "seedBoxCapacity": "200 kg",
+      "rowSpacing": "22.5 cm",
+      "powerRequirement": "50-75 HP"
+    },
+    "features": [
+      "Precise seed placement",
+      "Uniform depth control",
+      "Large seed box",
+      "Easy calibration",
+      "Suitable for multiple crops"
+    ],
+    "available": true,
+    "location": "Rajasthan, India",
+    "owner": {
+      "name": "Meera Agarwal",
+      "phone": "+91 43210 98765",
+      "rating": 4.6
+    },
+    "rating": 4.5,
+    "reviews": 15,
+    "createdAt": "2024-06-18T13:20:00Z",
+    "updatedAt": "2024-09-06T14:10:00Z"
+  },
+  {
+    "id": "6",
+    "name": "Sonalika DI 60 Tractor",
+    "category": "Tractor",
+    "description": "Robust 60 HP tractor with excellent performance for all farming operations. Known for durability and fuel efficiency.",
+    "image": "/images/sonalika_tractor.jpg",
+    "images": [
+      "/images/sonalika_tractor.jpg",
+      "/images/sonalika_tractor.jpg"
+    ],
+    "pricePerDay": 2300,
+    "pricePerWeek": 14000,
+    "pricePerMonth": 48000,
+    "specifications": {
+      "horsepower": "60 HP",
+      "engine": "3-cylinder diesel",
+      "transmission": "8F/2R",
+      "fuelCapacity": "100 liters",
+      "weight": "2600 kg"
+    },
+    "features": [
+      "Fuel efficient engine",
+      "Heavy duty transmission",
+      "Comfortable seating",
+      "Easy maintenance",
+      "All weather operation"
+    ],
+    "available": true,
+    "location": "Uttar Pradesh, India",
+    "owner": {
+      "name": "Vikram Sharma",
+      "phone": "+91 87654 32109",
+      "rating": 4.7
+    },
+    "rating": 4.6,
+    "reviews": 19,
+    "createdAt": "2024-07-20T16:30:00Z",
+    "updatedAt": "2024-09-05T12:45:00Z"
+  }
+]

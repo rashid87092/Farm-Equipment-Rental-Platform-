@@ -36,10 +36,10 @@ router.get('/', async (req, res) => {
       data: bookings
     });
   } catch (error) {
-    res.status(500).json({ 
-      success: false, 
-      message: 'Error fetching bookings', 
-      error: error.message 
+    res.status(500).json({
+      success: false,
+      message: 'Error fetching bookings',
+      error: error.message
     });
   }
 });
@@ -48,43 +48,57 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const bookings = await readBookingsData();
-    const { equipmentId, customerName, customerEmail, customerPhone, startDate, endDate, totalAmount } = req.body;
-    
-    // Validate required fields
-    if (!equipmentId || !customerName || !customerEmail || !startDate || !endDate) {
-      return res.status(400).json({
-        success: false,
-        message: 'Missing required fields'
-      });
-    }
-    
-    const newBooking = {
-      id: Date.now().toString(),
+
+    const {
       equipmentId,
+      equipmentName,
       customerName,
       customerEmail,
       customerPhone,
       startDate,
       endDate,
+      duration,
       totalAmount,
-      status: 'pending',
+      status,
+    } = req.body;
+
+    // ✅ Only 4 required fields now
+    if (!equipmentId || !customerName || !customerEmail || !startDate) {
+      return res.status(400).json({
+        success: false,
+        message: 'Missing required fields: equipmentId, customerName, customerEmail, startDate'
+      });
+    }
+
+    const newBooking = {
+      id: Date.now().toString(),
+      equipmentId,
+      equipmentName: equipmentName || "Unknown Equipment", // ✅ optional
+      customerName,
+      customerEmail,
+      customerPhone: customerPhone || "",                  // ✅ optional
+      startDate,
+      endDate: endDate || startDate,                       // ✅ fallback to startDate
+      duration: duration || 1,                             // ✅ optional
+      totalAmount: totalAmount || 0,                       // ✅ optional
+      status: status || 'pending',
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };
-    
+
     bookings.push(newBooking);
     await writeBookingsData(bookings);
-    
+
     res.status(201).json({
       success: true,
       message: 'Booking created successfully',
       data: newBooking
     });
   } catch (error) {
-    res.status(500).json({ 
-      success: false, 
-      message: 'Error creating booking', 
-      error: error.message 
+    res.status(500).json({
+      success: false,
+      message: 'Error creating booking',
+      error: error.message
     });
   }
 });
@@ -94,23 +108,23 @@ router.get('/:id', async (req, res) => {
   try {
     const bookings = await readBookingsData();
     const booking = bookings.find(b => b.id === req.params.id);
-    
+
     if (!booking) {
-      return res.status(404).json({ 
-        success: false, 
-        message: 'Booking not found' 
+      return res.status(404).json({
+        success: false,
+        message: 'Booking not found'
       });
     }
-    
+
     res.json({
       success: true,
       data: booking
     });
   } catch (error) {
-    res.status(500).json({ 
-      success: false, 
-      message: 'Error fetching booking', 
-      error: error.message 
+    res.status(500).json({
+      success: false,
+      message: 'Error fetching booking',
+      error: error.message
     });
   }
 });
@@ -120,39 +134,70 @@ router.put('/:id/status', async (req, res) => {
   try {
     const bookings = await readBookingsData();
     const index = bookings.findIndex(b => b.id === req.params.id);
-    
+
     if (index === -1) {
-      return res.status(404).json({ 
-        success: false, 
-        message: 'Booking not found' 
+      return res.status(404).json({
+        success: false,
+        message: 'Booking not found'
       });
     }
-    
+
     const { status } = req.body;
     const validStatuses = ['pending', 'confirmed', 'active', 'completed', 'cancelled'];
-    
+
     if (!validStatuses.includes(status)) {
       return res.status(400).json({
         success: false,
-        message: 'Invalid status'
+        message: `Invalid status. Must be one of: ${validStatuses.join(', ')}`
       });
     }
-    
+
     bookings[index].status = status;
     bookings[index].updatedAt = new Date().toISOString();
-    
+
     await writeBookingsData(bookings);
-    
+
     res.json({
       success: true,
       message: 'Booking status updated successfully',
       data: bookings[index]
     });
   } catch (error) {
-    res.status(500).json({ 
-      success: false, 
-      message: 'Error updating booking status', 
-      error: error.message 
+    res.status(500).json({
+      success: false,
+      message: 'Error updating booking status',
+      error: error.message
+    });
+  }
+});
+
+// DELETE /api/bookings/:id - Cancel booking
+router.delete('/:id', async (req, res) => {
+  try {
+    const bookings = await readBookingsData();
+    const index = bookings.findIndex(b => b.id === req.params.id);
+
+    if (index === -1) {
+      return res.status(404).json({
+        success: false,
+        message: 'Booking not found'
+      });
+    }
+
+    bookings[index].status = 'cancelled';
+    bookings[index].updatedAt = new Date().toISOString();
+    await writeBookingsData(bookings);
+
+    res.json({
+      success: true,
+      message: 'Booking cancelled successfully',
+      data: bookings[index]
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'Error cancelling booking',
+      error: error.message
     });
   }
 });

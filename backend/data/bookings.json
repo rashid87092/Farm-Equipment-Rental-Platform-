@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "equipmentId": 1,
+    "renterId": 2,
+    "ownerId": 1,
+    "startDate": "2024-01-20",
+    "endDate": "2024-01-22",
+    "duration": 3,
+    "totalCost": 7500,
+    "paymentMethod": "UPI",
+    "status": "confirmed",
+    "createdAt": "2026-06-02T10:21:26.805Z",
+    "notes": "Need for wheat harvesting season",
+    "delivery": {
+      "required": true,
+      "address": "Village Khanna, District Ludhiana, Punjab",
+      "deliveryFee": 500
+    }
+  },
+  {
+    "id": 2,
+    "equipmentId": 3,
+    "renterId": 3,
+    "ownerId": 2,
+    "startDate": "2024-01-25",
+    "endDate": "2024-01-27",
+    "duration": 2,
+    "totalCost": 3600,
+    "paymentMethod": "Bank Transfer",
+    "status": "pending",
+    "createdAt": "2026-06-02T10:21:26.805Z",
+    "notes": "Threshing required for 10 acres",
+    "delivery": {
+      "required": false,
+      "address": null,
+      "deliveryFee": 0
+    }
+  },
+  {
+    "id": "1780558501926",
+    "equipmentId": 1,
+    "customerName": "Rajveer Singh",
+    "customerEmail": "rajveer@example.com",
+    "customerPhone": "9876543210",
+    "startDate": "2026-05-24",
+    "endDate": "2026-05-24T01:00:00.000Z",
+    "totalAmount": 850,
+    "status": "pending",
+    "createdAt": "2026-06-04T07:35:01.926Z",
+    "updatedAt": "2026-06-04T07:35:01.928Z"
+  },
+  {
+    "id": "1781514684371",
+    "equipmentId": 1,
+    "equipmentName": "John Deere 5075E Tractor",
+    "customerName": "Mohammad Rashid",
+    "customerEmail": "rashid87092@gmail.com",
+    "customerPhone": "8709264323",
+    "startDate": "2026-06-16",
+    "endDate": "2026-06-16",
+    "duration": 7,
+    "totalAmount": 5950,
+    "status": "pending",
+    "createdAt": "2026-06-15T09:11:24.371Z",
+    "updatedAt": "2026-06-15T09:11:24.371Z"
+  }
+]

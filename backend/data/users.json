@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Rajesh Kumar",
+    "email": "rajesh.kumar@gmail.com",
+    "password": "$2a$10$y/ifPn4GXcM1C2Wm6Vm4t.TExOuGhWIC8snoeLjnb8MybwdewGsn2",
+    "userType": "owner",
+    "phone": "+91-9876543210",
+    "location": "Ludhiana, Punjab",
+    "coordinates": [
+      30.901,
+      75.8573
+    ],
+    "verified": true,
+    "createdAt": "2026-06-02T10:21:26.663Z",
+    "profile": {
+      "avatar": "/images/avatars/rajesh.jpg",
+      "bio": "Experienced farmer with 20+ years in agriculture",
+      "rating": 4.8,
+      "totalRentals": 156
+    }
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "email": "priya.sharma@gmail.com",
+    "password": "$2a$10$rKvu2beTumKhwv0L1SDkWu7eCXGwAfqpxtCAyphlAMAxuVUeX7eV.",
+    "userType": "renter",
+    "phone": "+91-9876543211",
+    "location": "Karnal, Haryana",
+    "coordinates": [
+      29.6857,
+      76.9905
+    ],
+    "verified": true,
+    "createdAt": "2026-06-02T10:21:26.734Z",
+    "profile": {
+      "avatar": "/images/avatars/priya.jpg",
+      "bio": "Small scale farmer looking for modern equipment",
+      "rating": 4.6,
+      "totalRentals": 23
+    }
+  },
+  {
+    "id": 3,
+    "name": "Amit Patel",
+    "email": "amit.patel@gmail.com",
+    "password": "$2a$10$9yZMX10PxWrDoKN176MWjeIiUTU0ffkPJtSaagalqgKRBZvqzSeOC",
+    "userType": "owner",
+    "phone": "+91-9876543212",
+    "location": "Ahmedabad, Gujarat",
+    "coordinates": [
+      23.0225,
+      72.5714
+    ],
+    "verified": true,
+    "createdAt": "2026-06-02T10:21:26.805Z",
+    "profile": {
+      "avatar": "/images/avatars/amit.jpg",
+      "bio": "Modern farming equipment owner and agricultural consultant",
+      "rating": 4.9,
+      "totalRentals": 89
+    }
+  }
+]

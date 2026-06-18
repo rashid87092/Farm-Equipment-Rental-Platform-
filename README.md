@@ -47,6 +47,26 @@ A comprehensive web application connecting farmers with equipment owners, making
 
 ## 🚀 Getting Started
 
+### Project Layout
+
+- `src/` - React frontend
+- `backend/` - Express API and file-based data store
+- `public/` - Static frontend assets served by Vite
+
+### Running the App
+
+1. Start the backend API:
+```bash
+npm run dev:server
+```
+
+2. Start the frontend app:
+```bash
+npm run dev
+```
+
+The frontend now proxies API requests to the backend, so both parts behave like one full-stack project in local development.
+
 ### Prerequisites
 - Node.js (v16 or higher)
 - npm or yarn package manager
